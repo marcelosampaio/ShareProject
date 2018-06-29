@@ -11,9 +11,39 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // observers
+        observerManager()
+        
+        
+        print("*** begin ***")
+        
     }
 
+    
+    // MARK: - Observers
+    private func observerManager() {
+        
+        //
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(shareExtensionDidClose(_:)),
+                                               name: NSNotification.Name(rawValue: "shareExtensionDidClose"),
+                                               object: nil)
+        
+        
+        
+    }
+    // observer actions
+    // rawValue: ReachabilityChangedNotification)
+    @objc private func shareExtensionDidClose(_ sender: NSNotification) {
+        
+        print("*** share extension did close.")
+        
+    }
+    
+    
+    
 }
