@@ -9,6 +9,7 @@
 import UIKit
 import Social
 
+
 class ShareViewController: SLComposeServiceViewController {
 
     
@@ -68,6 +69,10 @@ class ShareViewController: SLComposeServiceViewController {
                         let shared: UserDefaults = UserDefaults(suiteName: "group.share.apps")!
                         shared.set("string content goes here", forKey: "StatusShareExtensionKeyImage")
                         shared.synchronize()
+                        
+                        
+                        
+                        
                         
                         
 //                        let userDefault = UserDefaults.standard

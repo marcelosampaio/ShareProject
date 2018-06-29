@@ -20,17 +20,20 @@ class ViewController: UIViewController {
         
         
         /////////////// FORCE WRITE DATA
+    
+//        PersistenceManager.standard.addTransientExchangeData(TransientExchangeData.init(title: "post title", imageUrl: "imageUrl placeholder"))
 
-//        let shared: UserDefaults = UserDefaults(suiteName: "group.share.apps")!
-//        shared.set("string content goes here", forKey: "StatusShareExtensionKeyImage")
-//        shared.synchronize()
-        
         /////////////////////////////////
         
-        let shared2 : UserDefaults = UserDefaults(suiteName: "group.share.apps")!
-        let content = shared2.object(forKey: "StatusShareExtensionKeyImage") as! String
+        let obj = PersistenceManager.standard.getTransientExchangeData()
         
-        print("🐲 shared conntent: \(content)")
+        
+        
+//        let shared2 : UserDefaults = UserDefaults(suiteName: "group.share.apps")!
+//        let content = shared2.object(forKey: "StatusShareExtensionKeyImage") as! String
+//
+        print("🐲 shared title: \(obj.title)")
+        print("🐲 shared iamge url: \(obj.imageUrl)")
         
         /////////////
         
