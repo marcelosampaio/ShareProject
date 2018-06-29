@@ -22,9 +22,6 @@ class ShareViewController: SLComposeServiceViewController {
                 
             }
             
-            
-            
-            
 
         }
         
@@ -40,6 +37,7 @@ class ShareViewController: SLComposeServiceViewController {
         
         // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
+        
     }
 
     override func configurationItems() -> [Any]! {
@@ -48,7 +46,38 @@ class ShareViewController: SLComposeServiceViewController {
     }
 
     
+    override func presentationAnimationDidFinish() {
+        // Only interested in the first item
+        let extensionItem = extensionContext?.inputItems[0] as! NSExtensionItem
+        print("extensionItem: \(extensionItem)")
+        print("")
+        
 
+    }
+    
+
+    // MARK: - Helpers
+    private func imageFromExtensionItem(extensionItem: NSExtensionItem, callback: (_ image: UIImage?) -> Void) {
+        
+//        for attachment in extensionItem.attachments as! [NSItemProvider] {
+//            if(attachment.hasItemConformingToTypeIdentifier("0" as String)) {
+//                // Marshal on to a background thread
+//                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, UInt(0))) {
+//                    attachment.loadItemForTypeIdentifier("0" as String, options: nil) {
+//                        (imageProvider, error) in
+//                        var image: UIImage? = nil
+//                        if let error = error {
+//                            println("Item loading error: \(error.localizedDescription)")
+//                        }
+//                        image = imageProvider as? UIImage
+//                        dispatch_async(dispatch_get_main_queue()) {
+//                            callback(image: image)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+    }
     
     
     
