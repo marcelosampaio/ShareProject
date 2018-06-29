@@ -5,7 +5,7 @@
 //  Created by Marcelo on 6/28/18.
 //  Copyright © 2018 Marcelo. All rights reserved.
 //
-import Foundation
+
 import UIKit
 import Social
 
