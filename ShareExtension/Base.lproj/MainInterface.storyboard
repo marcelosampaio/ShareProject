@@ -20,7 +20,26 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qt0-Vl-oeH">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVk-QQ-vDP">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                        <items>
+                                            <navigationItem title="Compartilhe" id="hsd-YT-dk9">
+                                                <barButtonItem key="leftBarButtonItem" title="Close" id="UOW-JC-YPW">
+                                                    <connections>
+                                                        <action selector="closeView:" destination="38r-9K-Htc" id="yEa-Ri-c0z"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GVk-QQ-vDP" secondAttribute="trailing" id="5b0-1n-A8P"/>
+                                    <constraint firstItem="GVk-QQ-vDP" firstAttribute="leading" secondItem="qt0-Vl-oeH" secondAttribute="leading" id="rJ3-O2-Ht4"/>
+                                    <constraint firstItem="GVk-QQ-vDP" firstAttribute="top" secondItem="qt0-Vl-oeH" secondAttribute="top" id="wVU-q0-wPc"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

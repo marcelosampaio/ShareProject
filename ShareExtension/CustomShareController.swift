@@ -10,12 +10,23 @@ import UIKit
 
 class CustomShareController: UIViewController {
 
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        // Do any additional setup after loading the view.
     }
 
+    
+    // MARK: - UI Actions
+    @IBAction func closeView(_ sender: Any) {
+        print("🤲 close view")
+        self.extensionContext!.completeRequest(returningItems: [],completionHandler: nil)
+    }
+    
+    
+    
+    
+    
 
 }
