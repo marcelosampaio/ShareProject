@@ -22,28 +22,40 @@ class ShareViewController: SLComposeServiceViewController {
                 print("📮 .......")
                 
             }
-            
 
-        
         }
-        
-        
-        
-        
-        
         return true
     }
 
     override func didSelectPost() {
-        // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
-        
-        // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
-
-        //
-
-        print("*** did select post -> post notification to the app")
+        if let item = self.extensionContext?.inputItems[0] as? NSExtensionItem{
+            for ele in item.attachments!{
+                let itemProvider = ele as! NSItemProvider
+                
+                if itemProvider.hasItemConformingToTypeIdentifier("public.jpeg"){
+                    
+                    itemProvider.loadItem(forTypeIdentifier: "public.jpeg", options: nil, completionHandler: { (item, error) in
+                        
+                        var imgData: Data!
+                        if let url = item as? URL{
+                            imgData = try! Data(contentsOf: url)
+                        }
+                        
+                        if let img = item as? UIImage{
+                            imgData = UIImagePNGRepresentation(img)
+                        }
+                        
+                        let dict: [String : Any] = ["imgData" :  imgData, "name" : self.contentText]
+                        let userDefault = UserDefaults.standard
+                        userDefault.addSuite(named: "group.share.apps")
+                        userDefault.set(dict, forKey: "img")
+                        userDefault.synchronize()
+                    })
+                }
+            }
+        }
+        print("🦖 will complete request 🦖")
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
-        
     }
 
     override func configurationItems() -> [Any]! {

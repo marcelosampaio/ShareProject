@@ -19,10 +19,33 @@ class ViewController: UIViewController {
         observerManager()
         
         
-        print("*** begin ***")
+        print("*** 🐝 begin ***")
         
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("😇 view will appear")
+        
+        let userDefault = UserDefaults.standard
+        userDefault.addSuite(named: "group.share.apps")
+        
+//        if let dict = userDefault.value(forKey: "img") as? NSDictionary{
+        
+//            let data = dict.value(forKey: "imgData") as! Data
+//            let str = dict.value(forKey: "name") as! String
+//
+//            self.imgView.image = UIImage(data: data)
+//            self.lblText.text = str
+            
+//            userDefault.removeObject(forKey: "img")
+//            userDefault.synchronize()
+//        }
+    }
+    
+    
     
     // MARK: - Observers
     private func observerManager() {
