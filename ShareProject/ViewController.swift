@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     // MARK: - Observers
     private func observerManager() {
-        
+        print("*** obserever added")
         //
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(shareExtensionDidClose(_:)),
