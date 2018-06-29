@@ -11,6 +11,25 @@ import Social
 
 class ShareViewController: SLComposeServiceViewController {
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Reset Post button text.
+        for item in (self.navigationController?.navigationBar.items)! {
+            if let rightItem = item.rightBarButtonItem {
+                rightItem.title = "Meu Botao Aqui Mesmo"
+//                break
+            }
+            if let leftItem = item.leftBarButtonItem {
+                leftItem.title = "Fechar"
+//                break
+            }
+        }
+    }
+    
+    
+    
     override func isContentValid() -> Bool {
         // Do validation of contentText and/or NSExtensionContext attachments here
         
@@ -46,14 +65,33 @@ class ShareViewController: SLComposeServiceViewController {
                         }
                         
                         let dict: [String : Any] = ["imgData" :  imgData, "name" : self.contentText]
-                        let userDefault = UserDefaults.standard
-                        userDefault.addSuite(named: "group.share.apps")
-                        userDefault.set(dict, forKey: "img")
-                        userDefault.synchronize()
+                        let shared: UserDefaults = UserDefaults(suiteName: "group.share.apps")!
+                        shared.set("string content goes here", forKey: "StatusShareExtensionKeyImage")
+                        shared.synchronize()
+                        
+                        
+//                        let userDefault = UserDefaults.standard
+//                        userDefault.addSuite(named: "group.share.apps")
+//                        userDefault.set(dict, forKey: "StatusShareExtensionKeyImage")
+//                        userDefault.synchronize()
                     })
                 }
             }
         }
+        
+        
+        /////////////////////////////////
+        
+        let shared2 : UserDefaults = UserDefaults(suiteName: "group.share.apps")!
+        let content = shared2.object(forKey: "StatusShareExtensionKeyImage") as! String
+        
+        print("🐲🐲🐲🐲🐲🐲🐲🐲🐲 shared conntent: \(content)")
+        
+        /////////////
+        
+        
+        
+        
         print("🦖 will complete request 🦖")
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
     }

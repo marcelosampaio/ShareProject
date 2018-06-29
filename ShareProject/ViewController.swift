@@ -19,6 +19,27 @@ class ViewController: UIViewController {
         observerManager()
         
         
+        /////////////// FORCE WRITE DATA
+
+//        let shared: UserDefaults = UserDefaults(suiteName: "group.share.apps")!
+//        shared.set("string content goes here", forKey: "StatusShareExtensionKeyImage")
+//        shared.synchronize()
+        
+        /////////////////////////////////
+        
+        let shared2 : UserDefaults = UserDefaults(suiteName: "group.share.apps")!
+        let content = shared2.object(forKey: "StatusShareExtensionKeyImage") as! String
+        
+        print("🐲 shared conntent: \(content)")
+        
+        /////////////
+        
+        
+        
+        
+        
+        
+        
         print("*** 🐝 begin ***")
         
     }
@@ -29,19 +50,36 @@ class ViewController: UIViewController {
         
         print("😇 view will appear")
         
-        let userDefault = UserDefaults.standard
-        userDefault.addSuite(named: "group.share.apps")
+        /////////
+        let shared: UserDefaults = UserDefaults(suiteName: "group.share.apps")!
+        if let storedContent = shared.value(forKey: "StatusShareExtensionKeyImage") as? NSDictionary{
+            print("🏵 stored content: \(storedContent)")
+        }
+        print("🦖 outside")
+        print("...")
+//        let storedContent = shared.value(forKey: "StatusShareExtensionKeyImage") as! NSDictionary
         
-//        if let dict = userDefault.value(forKey: "img") as? NSDictionary{
+        /////////
         
-//            let data = dict.value(forKey: "imgData") as! Data
+        
+        
+//        let userDefault = UserDefaults.standard
+//        userDefault.addSuite(named: "group.share.apps")
+//
+//        if let dict = userDefault.value(forKey: "StatusShareExtensionKeyImage") as? NSDictionary{
+//
+////            let data = dict.value(forKey: "imgData") as! Data
 //            let str = dict.value(forKey: "name") as! String
 //
-//            self.imgView.image = UIImage(data: data)
-//            self.lblText.text = str
-            
+////            self.imgView.image = UIImage(data: data)
+////            self.lblText.text = str
+//            print("🦑 string: \(str)")
+//
+//
 //            userDefault.removeObject(forKey: "img")
 //            userDefault.synchronize()
+//        }else{
+//            print("🏂 no data has been stoted yet")
 //        }
     }
     
