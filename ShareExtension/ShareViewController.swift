@@ -69,7 +69,7 @@ class ShareViewController: SLComposeServiceViewController {
 //                        let transientObj = TransientExchangeData.init(title: "TransientObjectTitle", imageUrl: "TransientObjectImageUrl")
 //                        PersistenceManager.standard.addTransientExchangeData(transientObj)
 //                        print("👍 data has been stored")
-
+  
                     })
                 }
             }

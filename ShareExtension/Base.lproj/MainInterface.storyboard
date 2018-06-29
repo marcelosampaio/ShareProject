@@ -10,14 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Share View Controller-->
+        <!--Custom Share Controller-->
         <scene sceneID="o1Z-Ze-gVo">
             <objects>
-                <viewController id="38r-9K-Htc" customClass="ShareViewController" customModule="ShareExtension" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="38r-9K-Htc" customClass="CustomShareController" customModule="ShareExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q8F-Fb-8ke">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qt0-Vl-oeH">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qt0-Vl-oeH" firstAttribute="centerY" secondItem="Q8F-Fb-8ke" secondAttribute="centerY" id="0PI-to-BmY"/>
+                            <constraint firstItem="qt0-Vl-oeH" firstAttribute="centerX" secondItem="Q8F-Fb-8ke" secondAttribute="centerX" id="MPy-47-6no"/>
+                            <constraint firstItem="qt0-Vl-oeH" firstAttribute="leading" secondItem="4OP-r3-DNV" secondAttribute="leading" constant="67" id="XAv-xf-EQY"/>
+                            <constraint firstItem="qt0-Vl-oeH" firstAttribute="top" secondItem="4OP-r3-DNV" secondAttribute="top" constant="249" id="r9R-7r-kgz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4OP-r3-DNV"/>
                     </view>
                 </viewController>

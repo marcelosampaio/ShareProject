@@ -17,11 +17,11 @@
 		9CF0ADE720E581F4006F1008 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADE620E581F4006F1008 /* ShareViewController.swift */; };
 		9CF0ADEA20E581F4006F1008 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0ADE820E581F4006F1008 /* MainInterface.storyboard */; };
 		9CF0ADEE20E581F4006F1008 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9CF0ADE420E581F4006F1008 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9CF0ADFA20E6A3A3006F1008 /* CustomShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADF920E6A3A3006F1008 /* CustomShareController.swift */; };
 		9CF0ADFD20E6A757006F1008 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFC20E6A757006F1008 /* PersistenceManager.swift */; };
 		9CF0AE0020E6A7FD006F1008 /* TransientExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFF20E6A7FD006F1008 /* TransientExchangeData.swift */; };
 		9CF0AE0120E6BB91006F1008 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFC20E6A757006F1008 /* PersistenceManager.swift */; };
 		9CF0AE0220E6BBE1006F1008 /* TransientExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFF20E6A7FD006F1008 /* TransientExchangeData.swift */; };
+		9CF0AE0420E6C5B0006F1008 /* CustomShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0AE0320E6C5B0006F1008 /* CustomShareController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,9 +82,9 @@
 		9CF0ADEB20E581F4006F1008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CF0ADF320E58238006F1008 /* ShareProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareProject.entitlements; sourceTree = "<group>"; };
 		9CF0ADF420E58286006F1008 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
-		9CF0ADF920E6A3A3006F1008 /* CustomShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareController.swift; sourceTree = "<group>"; };
 		9CF0ADFC20E6A757006F1008 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		9CF0ADFF20E6A7FD006F1008 /* TransientExchangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientExchangeData.swift; sourceTree = "<group>"; };
+		9CF0AE0320E6C5B0006F1008 /* CustomShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +181,7 @@
 				9CF0ADE620E581F4006F1008 /* ShareViewController.swift */,
 				9CF0ADE820E581F4006F1008 /* MainInterface.storyboard */,
 				9CF0ADEB20E581F4006F1008 /* Info.plist */,
-				9CF0ADF920E6A3A3006F1008 /* CustomShareController.swift */,
+				9CF0AE0320E6C5B0006F1008 /* CustomShareController.swift */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -418,9 +418,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF0AE0420E6C5B0006F1008 /* CustomShareController.swift in Sources */,
 				9CF0AE0220E6BBE1006F1008 /* TransientExchangeData.swift in Sources */,
 				9CF0AE0120E6BB91006F1008 /* PersistenceManager.swift in Sources */,
-				9CF0ADFA20E6A3A3006F1008 /* CustomShareController.swift in Sources */,
 				9CF0ADE720E581F4006F1008 /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
