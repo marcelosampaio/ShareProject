@@ -60,10 +60,15 @@ class CustomShareController: SLComposeServiceViewController {
                             imgData = UIImagePNGRepresentation(img)
                         }
                         
-                        let dict: [String : Any] = ["imgData" :  imgData, "name" : self.contentText]
-                        let shared: UserDefaults = UserDefaults(suiteName: "group.share.apps")!
-                        shared.set("string content goes here", forKey: "StatusShareExtensionKeyImage")
-                        shared.synchronize()
+                        
+                        
+                        
+                        
+                        
+//                        let dict: [String : Any] = ["imgData" :  imgData, "name" : self.contentText]
+//                        let shared: UserDefaults = UserDefaults(suiteName: "group.share.apps")!
+//                        shared.set("string content goes here", forKey: "StatusShareExtensionKeyImage")
+//                        shared.synchronize()
                         
                         
                         //                        let userDefault = UserDefaults.standard
@@ -75,19 +80,8 @@ class CustomShareController: SLComposeServiceViewController {
             }
         }
         
-        
-        /////////////////////////////////
-        
-        let shared2 : UserDefaults = UserDefaults(suiteName: "group.share.apps")!
-        let content = shared2.object(forKey: "StatusShareExtensionKeyImage") as! String
-        
-        print("🐲🐲🐲🐲🐲🐲🐲🐲🐲 shared conntent: \(content)")
-        
-        /////////////
-        
-        
-        
-        
+
+
         print("🦖 will complete request 🦖")
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
     }

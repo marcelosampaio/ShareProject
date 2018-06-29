@@ -65,39 +65,26 @@ class ShareViewController: SLComposeServiceViewController {
                             imgData = UIImagePNGRepresentation(img)
                         }
                         
-                        let dict: [String : Any] = ["imgData" :  imgData, "name" : self.contentText]
-                        let shared: UserDefaults = UserDefaults(suiteName: "group.share.apps")!
-                        shared.set("string content goes here", forKey: "StatusShareExtensionKeyImage")
-                        shared.synchronize()
                         
-                        
-                        
-                        
-                        
-                        
-//                        let userDefault = UserDefaults.standard
-//                        userDefault.addSuite(named: "group.share.apps")
-//                        userDefault.set(dict, forKey: "StatusShareExtensionKeyImage")
-//                        userDefault.synchronize()
+//                        let transientObj = TransientExchangeData.init(title: "TransientObjectTitle", imageUrl: "TransientObjectImageUrl")
+//                        PersistenceManager.standard.addTransientExchangeData(transientObj)
+//                        print("👍 data has been stored")
+
                     })
                 }
             }
         }
         
-        
-        /////////////////////////////////
-        
-        let shared2 : UserDefaults = UserDefaults(suiteName: "group.share.apps")!
-        let content = shared2.object(forKey: "StatusShareExtensionKeyImage") as! String
-        
-        print("🐲🐲🐲🐲🐲🐲🐲🐲🐲 shared conntent: \(content)")
-        
-        /////////////
-        
-        
+
         
         
         print("🦖 will complete request 🦖")
+        let transientObj = TransientExchangeData.init(title: "TransientObjectTitle", imageUrl: "TransientObjectImageUrl")
+        PersistenceManager.standard.addTransientExchangeData(transientObj)
+        print("👍 data has been stored")
+        print("🦖 OK 2 🦖")
+        
+        
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
     }
 

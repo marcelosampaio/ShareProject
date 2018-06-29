@@ -26,14 +26,8 @@ class ViewController: UIViewController {
         /////////////////////////////////
         
         let obj = PersistenceManager.standard.getTransientExchangeData()
-        
-        
-        
-//        let shared2 : UserDefaults = UserDefaults(suiteName: "group.share.apps")!
-//        let content = shared2.object(forKey: "StatusShareExtensionKeyImage") as! String
-//
-        print("🐲 shared title: \(obj.title)")
-        print("🐲 shared iamge url: \(obj.imageUrl)")
+        print("🐲 stored title: \(String(describing: obj.title))")
+        print("🐲 stored iamge url: \(String(describing: obj.imageUrl))")
         
         /////////////
         

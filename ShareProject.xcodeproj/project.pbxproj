@@ -20,6 +20,8 @@
 		9CF0ADFA20E6A3A3006F1008 /* CustomShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADF920E6A3A3006F1008 /* CustomShareController.swift */; };
 		9CF0ADFD20E6A757006F1008 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFC20E6A757006F1008 /* PersistenceManager.swift */; };
 		9CF0AE0020E6A7FD006F1008 /* TransientExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFF20E6A7FD006F1008 /* TransientExchangeData.swift */; };
+		9CF0AE0120E6BB91006F1008 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFC20E6A757006F1008 /* PersistenceManager.swift */; };
+		9CF0AE0220E6BBE1006F1008 /* TransientExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFF20E6A7FD006F1008 /* TransientExchangeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -416,6 +418,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF0AE0220E6BBE1006F1008 /* TransientExchangeData.swift in Sources */,
+				9CF0AE0120E6BB91006F1008 /* PersistenceManager.swift in Sources */,
 				9CF0ADFA20E6A3A3006F1008 /* CustomShareController.swift in Sources */,
 				9CF0ADE720E581F4006F1008 /* ShareViewController.swift in Sources */,
 			);
