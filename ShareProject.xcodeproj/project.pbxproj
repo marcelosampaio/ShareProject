@@ -22,6 +22,8 @@
 		9CF0AE0120E6BB91006F1008 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFC20E6A757006F1008 /* PersistenceManager.swift */; };
 		9CF0AE0220E6BBE1006F1008 /* TransientExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0ADFF20E6A7FD006F1008 /* TransientExchangeData.swift */; };
 		9CF0AE0420E6C5B0006F1008 /* CustomShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0AE0320E6C5B0006F1008 /* CustomShareController.swift */; };
+		9CF0AE0620E6D11C006F1008 /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0AE0520E6D11B006F1008 /* img.png */; };
+		9CF0AE0720E6D11C006F1008 /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0AE0520E6D11B006F1008 /* img.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,7 @@
 		9CF0ADFC20E6A757006F1008 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		9CF0ADFF20E6A7FD006F1008 /* TransientExchangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientExchangeData.swift; sourceTree = "<group>"; };
 		9CF0AE0320E6C5B0006F1008 /* CustomShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareController.swift; sourceTree = "<group>"; };
+		9CF0AE0520E6D11B006F1008 /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,7 @@
 				9CF0ADF320E58238006F1008 /* ShareProject.entitlements */,
 				9CF0ADB220E5815B006F1008 /* AppDelegate.swift */,
 				9CF0ADB920E5815B006F1008 /* Assets.xcassets */,
+				9CF0AE0520E6D11B006F1008 /* img.png */,
 				9CF0ADBE20E5815B006F1008 /* Info.plist */,
 			);
 			path = ShareProject;
@@ -359,6 +363,7 @@
 				9CF0ADBD20E5815B006F1008 /* LaunchScreen.storyboard in Resources */,
 				9CF0ADBA20E5815B006F1008 /* Assets.xcassets in Resources */,
 				9CF0ADB820E5815B006F1008 /* Main.storyboard in Resources */,
+				9CF0AE0620E6D11C006F1008 /* img.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CF0ADEA20E581F4006F1008 /* MainInterface.storyboard in Resources */,
+				9CF0AE0720E6D11C006F1008 /* img.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

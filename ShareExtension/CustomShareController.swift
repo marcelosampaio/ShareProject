@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Social
+
 
 class CustomShareController: UIViewController {
 
@@ -16,7 +18,6 @@ class CustomShareController: UIViewController {
         super.viewDidLoad()
         
     }
-
     
     // MARK: - UI Actions
     @IBAction func closeView(_ sender: Any) {
@@ -24,9 +25,4 @@ class CustomShareController: UIViewController {
         self.extensionContext!.completeRequest(returningItems: [],completionHandler: nil)
     }
     
-    
-    
-    
-    
-
 }
