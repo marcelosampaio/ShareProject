@@ -55,7 +55,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.37263901654411757" green="0.67470973067813445" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,6 +67,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4OP-r3-DNV"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="yZR-co-UyA" id="jTX-Os-BVD"/>
+                        <outlet property="innerView" destination="qt0-Vl-oeH" id="G8E-YH-EKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCA-eD-ksT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

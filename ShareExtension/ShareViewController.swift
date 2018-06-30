@@ -104,9 +104,9 @@ class ShareViewController: SLComposeServiceViewController {
     }
     
 
-    // MARK: - Helpers
-    private func imageFromExtensionItem(extensionItem: NSExtensionItem, callback: (_ image: UIImage?) -> Void) {
-        
+//    // MARK: - Helpers
+//    private func imageFromExtensionItem(extensionItem: NSExtensionItem, callback: (_ image: UIImage?) -> Void) {
+//
 //        for attachment in extensionItem.attachments as! [NSItemProvider] {
 //            if(attachment.hasItemConformingToTypeIdentifier("0" as String)) {
 //                // Marshal on to a background thread
@@ -125,7 +125,7 @@ class ShareViewController: SLComposeServiceViewController {
 //                }
 //            }
 //        }
-    }
+//    }
     
     
     

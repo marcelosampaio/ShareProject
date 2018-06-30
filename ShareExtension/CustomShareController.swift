@@ -13,6 +13,9 @@ import MobileCoreServices
 class CustomShareController: UIViewController {
 
     // MARK: - Outlets
+    
+    @IBOutlet weak var innerView: UIView!
+    
     @IBOutlet weak var imageView: UIImageView!
     
     
@@ -21,6 +24,13 @@ class CustomShareController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        innerView.layer.cornerRadius = 18
+        innerView.layer.masksToBounds = true
+        innerView.layer.borderColor = UIColor.black.cgColor
+        innerView.layer.borderWidth = 1.5
+        
+        
         
         let content = extensionContext!.inputItems[0] as! NSExtensionItem
         let contentType = kUTTypeImage as String
@@ -31,9 +41,13 @@ class CustomShareController: UIViewController {
                 attachment.loadItem(forTypeIdentifier: contentType, options: nil) { data, error in
                     if error == nil {
                         let url = data as! URL
+                        
                         if let imageData = NSData.init(contentsOf: url) {
                             // load image
+                            print("📮 image url: \(url)")
                             self.imageView.image = UIImage(data: imageData as Data)
+//                            self.imageView.image = UIImage.init(data: imageData as Data)
+                            
                         }
                     } else {
                         
